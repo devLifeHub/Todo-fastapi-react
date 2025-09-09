@@ -8,7 +8,8 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - db_data:/var/lib/postgresql/data
+      - ./initdb:/docker-entrypoint-initdb.d
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U admin -d todo"]
       interval: 5s
@@ -19,7 +20,7 @@ services:
     ports:
       - "6379:6379"
     volumes:
-      - redisdata:/data   # отдельный том для данных Redis
+      - redisdata:/data
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
       interval: 5s
