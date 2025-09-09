@@ -1,0 +1,96 @@
+@use '@/styles/variables' as *;
+
+.form__field {
+  position: relative;
+  margin-top: 30px;
+
+  &::before {
+    content: attr(data-name);
+    position: absolute;
+    top: 0; bottom: 0; left: 20px; right: 0;
+    display: flex;
+    align-items: center;
+    color: #000;
+    opacity: 0;
+    z-index: 20;
+    font-family: $ff-default;
+    font-weight: 900;
+    letter-spacing: 1px;
+    transition: all 0.4s ease-in-out;
+  }
+
+  &-input,
+  &-textarea {
+    position: relative;
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #A100FF;
+    letter-spacing: 0.1rem;
+    border: none;
+    background: url("@/assets/backgrounds/bg_input-1.png") no-repeat center center;
+    background-size: 100% 100%;
+    outline: none;
+    z-index: 20;
+    transition: color 0.3s linear;
+
+    &::placeholder {
+      color: #ca9ffc;
+      font-family: $ff-addl-one;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: color 0.3s linear, transform 0.2s linear;
+    }
+
+    &:focus {
+      color: #fff;
+
+      &::placeholder {
+        color: transparent;
+      }
+    }
+
+    &:not(:focus):hover::placeholder {
+      color: #fff;
+      transform: scaleY(1.1) translateX(2px);
+    }
+  }
+
+  &:has(.form__field-input:focus)::before,
+  &:has(.form__field-input:not(:placeholder-shown))::before {
+    opacity: 1;
+    transform: translateY(-32px);
+  }
+
+  &:has(.form__field-textarea:focus)::before,
+  &:has(.form__field-textarea:not(:placeholder-shown))::before {
+    opacity: 1;
+    transform: translateY(-40px);
+  }
+}
+
+.password-change__btn {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  z-index: 50;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+  transition: opacity .4s ease-in-out;
+}
+
+.form__field:has(.form__field-input:placeholder-shown) .password-change__btn {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.password-change__icon--show {
+  transition: color .4s ease-in-out;
+}
+
+.password-change__btn:hover .password-change__icon--show {
+  color: #792391;
+}

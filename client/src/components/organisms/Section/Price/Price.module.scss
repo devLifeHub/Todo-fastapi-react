@@ -1,0 +1,38 @@
+@use '@/styles/variables' as *;
+
+.price {
+    margin-top: -1px;
+
+    background: url("@/assets/backgrounds/bg-5.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.price-container {
+    margin: 0 auto;
+}
+
+
+.price-title {
+    margin: 0 0 20px 0;
+    font-family: 'BigShouldersStencil', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.price__content-text {
+    margin: 0 0 20px 0;
+    font-family: 'BigShoulders', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.price-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}

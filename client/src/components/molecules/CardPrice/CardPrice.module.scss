@@ -1,0 +1,94 @@
+@use '@/styles/variables' as *;
+
+.price-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    width: 300px;
+    background: url("@/assets/backgrounds/bg-7.png") no-repeat center center;
+    background-size: 100% 100%;
+    border-radius: 0;
+    box-shadow: 0 0 12px 2px #fff;
+    border: 1px solid #fff;
+}
+
+.price-item::after {
+    content: "";
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    z-index: 10;
+    width: 40px;
+    height: 40px; 
+    background-size: 100% 100%;
+}
+
+.price-item:nth-child(1)::after {
+    background: url(/src/assets/emj-basic.png) no-repeat center center; 
+    background-size: 100% 100%; 
+}
+
+.price-item:nth-child(2)::after {
+    background: url(/src/assets/emj-platinum.png) no-repeat center center; 
+    background-size: 100% 100%; 
+}
+
+.price-item:nth-child(3)::after {
+    background: url(/src/assets/emj-vip.png) no-repeat center center; 
+    background-size: 100% 100%; 
+}
+
+.price-item::before {
+    content: "";
+    position: absolute;
+    left: 40%;
+    bottom: -40px;
+    z-index: 10;
+    max-width: 220px;
+    width: 100%;
+    max-height: 220px;
+    height: 100%;
+    background: url("@/assets/textures/texture-4.png") no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.price-item__descr {
+    margin: 0 0 80px 0;
+}
+
+.price-item__descr-title {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+}
+
+.price-item__descr-text {
+    color: #000;
+}
+
+.price-item__price {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.price-item__price-text {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+}
+
+.price-item__price-num {
+    margin: 0 20px 0 0;
+    font-size: 32px;
+    color: #fff;
+}
+
+.price-item__price {
+    margin: 0 0 40px 0;
+}

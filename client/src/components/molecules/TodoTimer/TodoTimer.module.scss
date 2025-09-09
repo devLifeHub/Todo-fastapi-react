@@ -1,0 +1,15 @@
+@use '@/styles/variables' as *;
+
+.timer__content {
+    text-align: right;
+    margin-right: 50px;
+    color: #c99cff;
+}
+
+.timer--fail {
+    color: $col-fail;
+}
+
+.timer--critical {
+    color: #c73f05;
+}

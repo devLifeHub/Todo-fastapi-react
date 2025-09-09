@@ -1,0 +1,107 @@
+@use '@/styles/variables' as *;
+
+.about {
+    background: url("@/assets/backgrounds/bg-2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about-container {
+    margin: 0 auto;
+    padding-bottom: calc($indent-pb + 50px);
+}
+
+.about-title {
+    margin: 0 0 20px 0;
+    font-family: 'BigShouldersStencil', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.about__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.about__content__descr {
+    margin-right: 100px;
+    width: 100%;
+}
+
+.about__content__descr-text {
+    margin: 0 100px 30px 0;
+    font-family: 'BigShoulders', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.about__content__descr-pros {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
+.about__content__pros-title {
+    position: relative;
+    display: inline-block;
+    margin: 0 0 20px 0;
+    font-family: 'BigShoulders', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.about__pros__list {
+    position: relative;
+    font-family: 'BigShoulders', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.about__pros__list-item {
+    display: flex;
+    align-items: center;
+    margin: 0 0 5px 0;
+}
+
+.about__pros__list-item:last-child {
+    margin: 0;
+}
+
+.about__pros__list-item::before {
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px 0 0;
+    width: 20px;
+    height: 15px;
+    z-index: 2;
+    background: url("@/assets/check-mark.png") no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.about__content__pros-graphe {
+    flex: 1;
+}
+
+.about__content__pros-img {
+    display: flex;
+    margin: 0 auto;
+    max-width: 200px;
+}
+
+.about__content-img {
+    width: 300px;
+    max-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}

@@ -1,0 +1,14 @@
+@use '@/styles/variables' as *;
+
+.account-delete {
+  &__text {
+    text-align: center;
+    margin: 0 0 20px 0;
+    color: #911515;
+  }
+
+  &__block-btn {
+    display: flex;
+    justify-content: space-around;
+  }
+}

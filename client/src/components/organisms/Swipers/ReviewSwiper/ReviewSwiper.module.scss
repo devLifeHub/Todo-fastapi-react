@@ -1,0 +1,82 @@
+// @use '@/styles/variables' as *;
+
+// .swiper {
+//   position: relative;
+// }
+
+// .slide {
+//   min-height: 100%;
+//   height: auto;
+// }
+
+// .swiper-btn-prev {
+//   left: var(--swiper-navigation-sides-offset, -6%);
+// }
+
+// .swiper-btn-next {
+//   right: var(--swiper-navigation-sides-offset, -6%);
+// }
+
+// // .swiper-btn-prev::after,
+// // .swiper-btn-next::after {
+// //   color: #6f587c;
+// // }
+
+// .swiper-btn {
+//     width: 60px;
+//     height: 40px;
+//     color: #fff;
+//   }
+  
+//   .swiper-btn-icon {
+//     transition: color .3s linear;
+//   }
+
+//   .icon-next {
+//     transform: rotateX(180deg) rotateZ(180deg);
+//   }
+
+//   // .swiper-btn:hover .swiper-btn-icon  {
+//   //   color: rgb(183, 0, 255);
+//   // }
+
+//   .swiper-btn path:nth-child(1) {
+//       transition: color .3s ease-in-out;
+//   }
+
+//   .swiper-btn path:nth-child(2) {
+//       transition: color .3s ease-in-out .1s;
+//   }
+
+//   // .swiper-btn path:nth-child(2) {
+//   //     transition: color .2s linear;
+//   // }
+
+
+//   .swiper-btn:hover path:nth-child(1) {
+//       color: #7C11F9;
+//       // transition: color .3s linear .2s;
+//   }
+
+//   // .swiper-btn:hover path:nth-child(2) {
+//   //     color: #7C11F9;
+//   //     // transition: color .3s linear .2s;
+//   // }
+
+//   .swiper-btn:hover path:nth-child(2) {
+//       color: #7C11F9;
+//       // transition: color .3s linear .3s;
+//   }
+  
+//   // .swiper-btn-prev {
+//   //   left: var(--swiper-navigation-sides-offset, 2%);
+//   // }
+  
+//   // .swiper-btn-next {
+//   //   right: var(--swiper-navigation-sides-offset, 2%);
+//   // }
+  
+//   .swiper-btn-prev::after,
+//   .swiper-btn-next::after {
+//     display: none;
+//   }

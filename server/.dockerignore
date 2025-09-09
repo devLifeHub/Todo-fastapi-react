@@ -1,0 +1,44 @@
+# VCS
+.git
+.gitignore
+
+# OS/IDE
+.DS_Store
+.idea
+.vscode
+
+# Python caches and tooling
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+coverage.xml
+htmlcov/
+.eggs/
+*.egg-info/
+
+# Envs and local config
+tdenv/
+.venv/
+venv/
+
+# Logs and temp
+logs/
+*.log
+tmp/
+*.swp
+*.swo
+
+# Node artifacts that могут затесаться
+node_modules/
+dist/
+build/
+
+# Docker
+Dockerfile.*
+docker-compose*.yml

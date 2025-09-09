@@ -1,0 +1,90 @@
+@use '@/styles/variables' as *;
+
+@use "@/styles/variables" as *;
+
+// Основной контейнер авторизации
+.auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  min-height: 680px;
+  // background: #000;
+  // background: url("../../../assets/texture-1.png") no-repeat center center; // ???????????
+  background-size: 100% 100%;
+
+  &-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+  }
+}
+
+// Опциональные формы внутри блока авторизации
+.auth__forms-optional {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  background-color: #000;
+  transform: translateX(45px);
+  transition: transform 0.4s ease-in-out;
+
+  // Эффект градиентного фона
+  &::before,
+  &::after {
+    // content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      var(--rotate),
+      #5ddcff,
+      #3c67e3 43%,
+      #4e00c2
+    );
+    z-index: -1;
+    animation: spin 2.5s linear infinite;
+  }
+
+  &::after {
+    top: -2%;
+    left: -4%;
+    height: 104%;
+    width: 108%;
+    transform: scale(0.8);
+    filter: blur(calc(65vh / 6));
+    opacity: 1;
+    transition: opacity 0.5s;
+  }
+}
+
+// Анимация вращения градиента
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+// Активное состояние формы авторизации
+.auth--active {
+  transform: translateX(calc(100% + 45px));
+  transition: transform 0.4s ease-in-out;
+}

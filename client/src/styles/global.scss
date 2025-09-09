@@ -1,0 +1,77 @@
+@use '@/styles/variables' as *;
+
+body {
+  font-family: $ff-default;
+  font-weight: 400;
+  letter-spacing: .5px;
+  color: $col-default;
+  background: $main-bg;
+}
+
+button, a {
+  font-family: $ff-addl-one;
+  font-weight: 600;
+  color: $col-default;
+  cursor: pointer;
+}
+
+.container {
+    padding: 0 100px;
+    max-width: 1920px;
+}
+
+.container__indent {
+    padding-top: $indent-pt;
+    padding-bottom: $indent-pb;
+}
+
+// btn-icon and wrap & icon
+.btn-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  transition: transform .3s ease-in-out;
+}
+
+.btn-icon:hover {
+  transform: scale(1.1);
+}
+
+.btn-icon:hover .btn-icon__wrap {
+  color:#7C11F9;
+}
+
+
+.btn-icon:hover .btn-icon__icon  {
+  color: #dddddd;
+}
+
+.btn--active .btn-icon__wrap {
+  color: #c99cff;
+}
+
+.btn--active .btn-icon__icon {
+  color: #000;
+  transform: rotateY(180deg);
+}
+
+.btn-icon__wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transition: color .4s ease-in-out;
+}
+
+.btn-icon__icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  transition: color .4s ease-in-out, transform .4s ease-in-out;
+}
+
+
+

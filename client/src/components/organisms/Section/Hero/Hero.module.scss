@@ -1,0 +1,41 @@
+@use '@/styles/variables' as *;
+
+.hero {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 60px);
+}
+
+.hero__img {
+    width: 100%;
+    height: 100%;
+    background: url("@/assets/backgrounds/bg-1.png") no-repeat left center;
+    background-size: cover;
+}
+
+.hero__content {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    margin: 0 20px 0 0;
+    max-width: 540px;
+    transform: translate(0, -50%);
+}
+
+.hero__title {
+    margin: 0 0 20px 0;
+    font-size: 64px;
+    font-family: "BigShouldersInline", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #bf1af9;
+    white-space: pre-line;
+}
+
+.hero__subtitle {
+    font-size: 24px;
+    font-family: "BigShoulders", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+}

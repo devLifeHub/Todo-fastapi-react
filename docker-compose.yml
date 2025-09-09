@@ -1,0 +1,92 @@
+services:
+  pg:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: todo
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin -d todo"]
+      interval: 5s
+      retries: 5
+
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
+    volumes:
+      - redisdata:/data   # отдельный том для данных Redis
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      retries: 5
+
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    image: todolist-server
+    user: "${UID}:${GID}"
+    working_dir: /app/todo
+    command: >
+      sh -c "
+        poetry run alembic upgrade head &&
+         poetry run gunicorn app_factory:app -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000"
+
+    ports:
+      - "8000:8000"
+    depends_on:
+      pg:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgres://admin:admin@pg:5432/todo
+      REDIS_URL: redis://redis:6379/0
+    volumes:
+      - ./server/todo:/app/todo
+      - ./server/middlewares.py:/app/middlewares.py
+      - ./server/README.md:/app/README.md
+      - /app/tdenv
+
+
+  celery:
+    image: todolist-server
+    user: "${UID}:${GID}"
+    command: poetry run celery -A todo.core.celery_app worker --loglevel=info
+    depends_on:
+      redis:
+        condition: service_healthy
+      pg:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgres://admin:admin@pg:5432/todo
+      REDIS_URL: redis://redis:6379/0
+    volumes:
+      - ./server/todo:/app/todo
+      - ./server/middlewares.py:/app/middlewares.py
+      - ./server/README.md:/app/README.md
+
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    environment:
+      VITE_API_URL: http://localhost:8000
+    depends_on:
+      - server
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+
+volumes:
+  pgdata:
+  redisdata:

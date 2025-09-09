@@ -1,0 +1,124 @@
+@use '@/styles/variables' as *;
+
+.header {
+    position: relative;
+    background-color: #000;
+    font-family: "";
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.header-actions {
+    display: flex;
+    justify-content: space-between;
+    max-width: 620px;
+    width: 100%;
+}
+
+.header-decor {
+    background: url(/src/assets/elem-3.png) no-repeat top right;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 200%;
+    z-index: 1;
+}
+
+//  ======= base ======
+.header {
+    position: relative;
+    background-color: #000;
+    font-family: "";
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.header-actions {
+    display: flex;
+    justify-content: space-between;
+    max-width: 680px;
+    width: 100%;
+}
+
+.header-decor {
+    background: url("@/assets/decors/decor-1.png") no-repeat top right;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 200%;
+    z-index: 1;
+}
+
+
+// ======= todo =======
+
+.header {
+    position: relative;
+    background-color: #000;
+    font-family: "";
+}
+
+.header__logo-plan {
+    position: relative;
+}
+
+.header__plan {
+    position: absolute;
+    top: 0;
+    right: -50%;
+}
+
+.header__info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.header__info__fullname {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    height: fit-content;
+    background: url("@/assets/frames/frame-5.png") no-repeat center center;
+    background-size: 100% 100%;
+    z-index: 2;
+}
+
+.info__user {
+    width: max-content;
+    font-family: $ff-addl-one;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.header-actions {
+    display: flex;
+    justify-content: space-between;
+    max-width: 620px;
+    width: 100%;
+}

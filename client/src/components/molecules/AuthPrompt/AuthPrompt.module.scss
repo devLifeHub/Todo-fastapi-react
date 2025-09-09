@@ -1,0 +1,66 @@
+@use '@/styles/variables' as *;
+
+.auth-prompt {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-height: $auth-prompt-min-height;
+}
+
+.auth-prompt__content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 75px 45px;
+    width: 100%;
+    color: #fff;
+    font-weight: 300;
+}
+
+.auth-prompt__content::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    max-height: 150px;
+    background: url("@/assets/decors/decor-6.png") no-repeat left bottom;
+    background-size: 100% 100%;
+}
+
+.auth-prompt__content__descr-title {
+    margin-bottom: 15px;
+    font-size: 1.66rem;
+    line-height: 1em;
+}
+
+.auth-prompt__content__descr-text {
+    font-size: 0.83rem;
+    line-height: 1.4em;
+}
+
+.auth-prompt__content-btn {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 10px 30px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1em;
+    letter-spacing: 0.2rem;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.auth-prompt__content-btn:hover {
+    color: rgba(34, 34, 34, 0.85);
+    background-color: #ccc;
+}

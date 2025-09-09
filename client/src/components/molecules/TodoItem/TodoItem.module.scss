@@ -1,0 +1,149 @@
+@use '@/styles/variables' as *;
+@use '@/styles/global' as *;
+
+.todo-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.todo-item__timestamp {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 80px;
+}
+
+.todo-item__note {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.todo-item__timestamp-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.todo-item__content {
+    padding: 20px 30px;
+}
+
+.todo-item__content__title,
+.todo-item__content__descr {
+    display: flex;
+}
+
+.todo-item__content__title {
+    margin-bottom: 5px;
+}
+
+.todo-item__content__title-label,
+.todo-item__content__descr-label {
+    font-family: $ff-addl-one;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #d2acff;
+}
+
+.todo-item__content__title-label {
+    margin-right: 60px;
+}
+
+.todo-item__content__descr-label {
+    margin-right: 10px;
+}
+
+.todo-item__content__descr-text {
+    font-size: 14px;
+    color: #999;
+}
+
+.todo-item__control-wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.todo-item__control-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.todo-item__control-icon {
+    color: #000;
+}
+
+
+.todo--fail {
+    color: #6f0000;
+}
+
+.todo--fail .todo-item__content__title-label,
+.todo--fail .todo-item__content__title-text,
+.todo--fail .todo-item__content__descr-label,
+.todo--fail .todo-item__content__descr-text {
+    color: #6f0000;
+}
+
+.todo--completed {
+    color: #006f20;
+}
+
+.todo--completed .todo-item__content__title-label,
+.todo--completed .todo-item__content__title-text,
+.todo--completed .todo-item__content__descr-label,
+.todo--completed .todo-item__content__descr-text {
+    color: #006f20;
+}
+
+.todo--active {
+    color: #c99cff;
+}
+
+.todo--active .todo-item__content__title-label,
+.todo--active .todo-item__content__title-text,
+.todo--active .todo-item__content__descr-label,
+.todo--active .todo-item__content__descr-text {
+    color: #c99cff;
+}
+
+.btn {
+    color: #fff;
+    transition: color .3s ease-in-out;
+}
+
+.btn:hover {
+    color: #7C11F9;
+}
+
+.todo--active .btn:not(:hover) {
+    color: #c99cff;
+}
+
+.todo-item__control-wrap {
+    color: inherit;
+}
+
+
+// btn-icon and wrap & icon
+.btn-icon__wrap {
+    color: $btn-wrap-color-one;
+}
+
+.btn-icon__icon {
+    color: $btn-icon-color-one;
+}

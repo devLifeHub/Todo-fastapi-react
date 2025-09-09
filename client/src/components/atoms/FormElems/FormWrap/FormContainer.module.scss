@@ -1,0 +1,15 @@
+@use '@/styles/variables' as *;
+
+.form {
+  &__container {
+    width: calc(100vw / 2.5);
+  }
+
+  &-wrap {
+    position: relative;
+    width: 100%;
+    padding: 50px;
+    background: url("@/assets/backgrounds/bg-8.png") no-repeat center center;
+    background-size: 100% 100%;
+  }
+}

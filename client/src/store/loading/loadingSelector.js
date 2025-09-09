@@ -1,0 +1,1 @@
+export const selectLoadingSlice = s => s.loading.isLoading

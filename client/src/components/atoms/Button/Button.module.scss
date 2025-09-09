@@ -1,0 +1,52 @@
+@use '@/styles/variables' as *;
+
+.btn {
+  position: relative;
+  padding: 10px 20px;
+  border: none;
+  background: url("@/assets/backgrounds/bg_btn-1.png") no-repeat center center;
+  background-size: 100% 100%;
+  font-weight: 700;
+  line-height: 2;
+  color: #ca9ffc;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s linear;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    background: url("@/assets/backgrounds/bg_btn-2.png") no-repeat center center;
+    background-size: 90% 100%;
+    opacity: 0;
+    z-index: 20;
+    transition: all 0.4s linear;
+  }
+
+  &::before {
+    content: attr(data-name);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    opacity: 0;
+    z-index: 30;
+    transition: all 0.3s linear;
+  }
+
+  &:hover {
+    color: transparent;
+
+    &::after {
+      opacity: 1;
+    }
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@use '@/styles/variables' as *;
+
+.logo-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 60px;
+}
+
+.logo {
+    width: inherit;
+    height: inherit;
+    object-fit: contain; 
+}

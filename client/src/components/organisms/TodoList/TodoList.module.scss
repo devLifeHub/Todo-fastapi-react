@@ -1,0 +1,27 @@
+@use '@/styles/variables' as *;
+
+.todo__zero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo__zero-text {
+    margin-right: 10px;
+}
+
+.todo__zero-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(src/assets/add.svg) no-repeat center center;
+    background-size: contain;
+}
+
+.todo-list {
+    margin-bottom: 100px;
+}
+
+.todo-item {
+    margin-bottom: 20px;
+}

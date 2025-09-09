@@ -1,0 +1,32 @@
+@use '@/styles/variables' as *;
+
+.header {
+    position: relative;
+    background-color: #000;
+    font-family: "";
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.header-actions {
+    display: flex;
+    justify-content: space-between;
+    max-width: 620px;
+    width: 100%;
+}
+
+.header-decor {
+    background: url("@/assets/decors/decor-1.png") no-repeat top right;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 200%;
+    z-index: 1;
+}

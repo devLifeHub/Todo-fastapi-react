@@ -1,0 +1,128 @@
+@use '@/styles/variables' as *;
+@use "@/styles/animations/modal-slide" as anim;
+
+.profile-content {
+    @include anim.modal-slide();
+}
+
+.form-container {
+  position: relative;
+  width: 100%;
+  padding: 50px;
+  background: url("@/assets/backgrounds/bg-8.png") no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.profile__title {
+    margin-left: -100px;
+    margin-top: -50px;
+    margin-bottom: 20px;
+    transform: rotateZ(340deg);
+    width: 300px;
+    height: 100px;
+    background: url(/src/assets/title-profile.png) no-repeat left center;
+    background-size: 100% 100%;
+}
+
+.form__btn-close {
+    position: absolute;
+    top: 10px;
+    right: -30px;
+    width: 24px;
+    height: 24px;
+}
+
+.btn__icon-close {
+    width: 100%;
+    height: 100%;
+    transition: color .3s linear;
+}
+
+.form__btn-close:hover .btn__icon-close {
+    color: #ff0000;
+}
+
+.avatar-field {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    z-index: 30;
+    display: flex;
+}
+
+.avatar-field-text {
+    align-self: center;
+    font-family: "BigShouldersStencil", sans-serif;
+    font-weight: 600;
+    color: #000;
+}
+
+.avatar-block__avatar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-block__avatar::before {
+    content: "";
+    position: absolute;
+    margin: 0 0 15px 0;
+    display: flex;
+    max-width: 70px;
+    max-height: 70px;
+    width: 100%;
+    height: 100%;
+    background: url(src/assets/change_avatar_text.png) no-repeat center center;
+    background-size: 100% 100%;
+    z-index: 20;
+    opacity: 0;
+    transform: rotateZ(340deg);
+    transition: opacity .4s linear;
+}
+
+.avatar-block__avatar:has(.avatar__field-input:hover)::before {
+  opacity: 1;
+}
+
+.avatar-menu__avatar {
+    position: relative;
+    padding: 1px 2.5px 18px 6px;
+    width: 100px;
+    height: 100px;
+    background: url("@/assets/frames/frame-3.png") no-repeat center center;
+    background-size: 100% 100%;
+    z-index: 10;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: inset 0 0 1px 1px #000;
+}
+
+.avatar__field-input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 40;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.form__acc-delete__btn {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    color: #D5405D;
+}
+
+.form__acc-delete__btn::before {
+    content: attr(data-name);
+    color: #D5405D;
+}

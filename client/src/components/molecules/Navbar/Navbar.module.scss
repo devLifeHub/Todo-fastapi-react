@@ -1,0 +1,58 @@
+@use '@/styles/variables' as *;
+
+.navbar {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  margin: 0 100px 0 0;
+  max-width: 420px;
+  width: 100%;
+}
+
+.navbar-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-list__item:not(:last-child) {
+  margin: 0 40px 0 0;
+}
+
+.navbar-list__item-link {
+  position: relative;
+  transition: color 0.3s linear;
+
+  &:hover {
+    color: transparent;
+
+    &::after,
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &::after,
+  &::before {
+    position: absolute;
+    left: 0;
+    width: 0;
+    transition: width 0.5s;
+  }
+
+  &::after {
+    content: "";
+    bottom: -5px;
+    height: 1px;
+    background-color: #7c11f9;
+  }
+
+  &::before {
+    content: attr(data-name);
+    white-space: nowrap;
+    color: #7c11f9;
+    overflow: hidden;
+  }
+}

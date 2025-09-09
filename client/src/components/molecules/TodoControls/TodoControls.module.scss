@@ -1,0 +1,65 @@
+@use '@/styles/variables' as *;
+@use '@/styles/global' as *;
+
+.controls-container {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.controls-wrap {
+    width: 100%;
+    max-width: 640px;
+    height: 80px;
+}
+
+.controls__list {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    gap: 20px;
+    transform: translateY(-50%);
+}
+
+.controls__item__btn-wrap {
+    color: #000;
+}
+
+.controls__item__btn-icon {
+    color: #fff;
+}
+
+.item--hidden {
+    pointer-events: none;
+}
+
+.item--hidden .btn-icon__wrap {
+    color: #898888;
+}
+
+.btn {
+    color: #000;
+    transition: color .3s ease-in-out;
+}
+
+.btn:hover {
+    color: #7C11F9;
+}
+
+.controls__item__btn-wrap {
+    color: inherit;
+}
+
+
+// btn-icon and wrap & icon
+.btn-icon__wrap {
+    color: $btn-wrap-color-two;
+}
+
+.btn-icon__icon {
+    color: $btn-icon-color-two;
+}
