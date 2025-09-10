@@ -36,7 +36,7 @@ const ReviewItemView = ({ data, url, isLoading }) => {
                 </div>
 
                 <div className={clsx(s["item__content__comment"])}>
-                    <p className={clsx(s["slide__comment-text"])}>
+                    <p className={clsx(s["item__comment-text"])}>
                         {data.comment || "No comment"}
                     </p>
                 </div>

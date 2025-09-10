@@ -9,7 +9,7 @@ const Price = () => {
   const arr_prices = Object.entries(prices)
 
   return (
-    <div className={s["price"]}>
+    <div id="price" className={s["price"]}>
       <div className={`${s["price-container"]} container container__indent`}>
         <h2 className={s["price-title"]}>
           {pricesData.prices.pricesTitle}

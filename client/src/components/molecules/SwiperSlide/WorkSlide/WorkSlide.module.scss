@@ -1,3 +1,5 @@
+@use '@/styles/templates' as *;
+
 .work__slide {
   display: flex;
   gap: 20px;
@@ -9,5 +11,14 @@
 }
 
 .work__slide__descr {
+  padding: 100px 80px 100px 60px;
   max-width: 40%;
+  background: url("../../../../assets/textures/texture_paper-1.png") no-repeat center center;
+  background-size: 100% 100%;
 }
+
+.work__slide__descr-text {
+  color: #000;
+}
+
+// ================

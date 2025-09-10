@@ -1,38 +1,27 @@
 @use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
 
 .price {
-    margin-top: -1px;
+  @include bg($url: $price-bg, $size: cover);
 
-    background: url("@/assets/backgrounds/bg-5.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.price-container {
+  &-container {
     margin: 0 auto;
-}
+  }
 
+  &-title {
+    margin: $section-title-margin;
+    @include section-title($section-title-color-1);
+  }
 
-.price-title {
-    margin: 0 0 20px 0;
-    font-family: 'BigShouldersStencil', sans-serif;
-    font-size: 32px;
-    font-weight: 600;
-    color: #fff;
-}
+  &__content-text {
+    @include section-descr($section-descr-color-1);
+    margin: $section-descr-margin;
+    width: 60%;
+  }
 
-.price__content-text {
-    margin: 0 0 20px 0;
-    font-family: 'BigShoulders', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #fff;
-}
-
-.price-list {
+  &-list {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+  }
 }

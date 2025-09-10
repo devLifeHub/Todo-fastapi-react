@@ -10,7 +10,7 @@ const WorkSlide = ({img}) => {
         <img className={clsx(s["work__slide-img"])} src={img} alt="" />
         </div>
         <div className={clsx(s["work__slide__descr"])}>
-            <p>
+            <p className={clsx(s["work__slide__descr-text"])}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Velit nihil error ea, tempore aliquid at, perspiciatis suscipit beatae maxime quo minus incidunt deleniti dicta commodi eligendi non dolorem officiis a.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, excepturi illo! Laboriosam earum quos ipsa perferendis.
