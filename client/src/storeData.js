@@ -1,14 +1,14 @@
 export const navbarLinks = [
-  { name: 'Main', to: '/' },
   { name: 'About Me', to: '#about' },
-  { name: 'Services', to: '#services' },
-  { name: 'Contacts', to: '#contact' },
+  { name: 'Work', to: '#work' },
+  { name: 'Price', to: '#price' },
+  { name: 'Reviews', to: '#reviews' },
 ];
 
 export const pricesData = {
     prices: {
         pricesTitle: "Price List",
-        pricesDescr: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        pricesDescr: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab rem maiores saepe, similique quaerat est eos sapiente labore, deleniti quas quis itaque eaque dignissimos fugiat esse iure, atque ad et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quis, cumque quasi adipisci quaerat ea repudiandae nihil non totam esse, culpa, magni veniam voluptates reiciendis laborum voluptatum accusamus beatae perspiciatis!",
     },
     BASIC: { 
       title: "Basic", 

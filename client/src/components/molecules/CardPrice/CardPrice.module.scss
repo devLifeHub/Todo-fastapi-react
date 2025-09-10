@@ -1,4 +1,5 @@
 @use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
 
 .price-item {
     position: relative;
@@ -60,13 +61,11 @@
 
 .price-item__descr-title {
     margin: 0 0 10px 0;
-    font-size: 24px;
-    font-weight: 700;
-    color: #000;
+    @include card-title($ff: $ff-2, $color: $card-title-color-2);
 }
 
 .price-item__descr-text {
-    color: #000;
+    @include card-descr($color: $card-descr-color-2);
 }
 
 .price-item__price {
@@ -78,9 +77,7 @@
 }
 
 .price-item__price-text {
-    font-size: 24px;
-    font-weight: 600;
-    color: #000;
+    @include price-text($ff: $ff-1, $color: $price-text-color);
 }
 
 .price-item__price-num {

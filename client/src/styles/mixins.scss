@@ -1,0 +1,73 @@
+@mixin flex-center($dir: row, $gap: 0) {
+  display: flex;
+  flex-direction: $dir;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+
+// section title
+@mixin section-title($color: #000) {
+  font-family: 'BigShouldersStencil', sans-serif;
+  line-height: 1.5;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: .05rem;
+  color: $color;
+}
+
+// section description
+@mixin section-descr($color: #fff) {
+    font-family: 'BigShoulders', sans-serif;
+    font-size: 1rem;;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: .05rem;
+    color: $color;
+}
+
+// card title
+@mixin card-title($ff, $color) {
+    font-family: $ff;
+    font-size: 1.4rem;;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: .05rem;
+    color: $color;
+}
+
+// card descr
+@mixin card-descr($color) {
+    font-family: 'BigShoulders', sans-serif;
+    font-size: 1rem;;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: .05rem;
+    color: $color;
+}
+
+@mixin price-text($ff, $color) {
+    font-family: $ff;
+    font-size: 1.2rem;;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: .05rem;
+    color: $color;
+}
+
+@mixin review-comment ($color) {
+    font-family: 'BigShoulders', sans-serif;
+    font-size: 1rem;;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: .05rem;
+    color: $color;
+}
+
+@mixin bg($url, $size: 100% 100%, $pos: center, $repeat: no-repeat) {
+  background-image: url(#{$url});
+  background-size: $size;
+  background-position: $pos;
+  background-repeat: $repeat;
+}
+

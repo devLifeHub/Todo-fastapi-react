@@ -2,14 +2,15 @@
 
 body {
   font-family: $ff-default;
+  font-size: $fs-default;
   font-weight: 400;
   letter-spacing: .5px;
   color: $col-default;
-  background: $main-bg;
+  background: $bg-default;
 }
 
 button, a {
-  font-family: $ff-addl-one;
+  font-family: $ff-2;
   font-weight: 600;
   color: $col-default;
   cursor: pointer;

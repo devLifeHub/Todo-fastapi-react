@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { navbarLinks } from '@/storeData';
 import s from './Navbar.module.scss';
 
@@ -7,13 +7,14 @@ const Navbar = () => (
     <ul className={s['navbar-list']}>
       {navbarLinks.map(({ name, to }) => (
         <li key={name} className={s['navbar-list__item']}>
-          <Link
+          <HashLink
+            smooth
             data-name={name}
             className={s['navbar-list__item-link']}
             to={to}
           >
             {name}
-          </Link>
+          </HashLink>
         </li>
       ))}
     </ul>

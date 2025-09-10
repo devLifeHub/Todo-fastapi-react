@@ -1,6 +1,9 @@
 $ff-default: "BigShoulders", sans-serif;
-$ff-addl-one: "BigShouldersStencil", sans-serif;
-$main-bg: #000;
+$fs-default: 16px;
+$bg-default: #000;
+
+$ff-1: "BigShoulders", sans-serif;
+$ff-2: "BigShouldersStencil", sans-serif;
 
 $col-default: #fff;
 $col-base: #ca02ff;
@@ -23,3 +26,29 @@ $btn-icon-color-one: #000;
 
 $btn-wrap-color-two: #000;
 $btn-icon-color-two: #fff;
+
+// section title & descr & text
+$section-title-margin: 0 0 20px 0;
+$section-title-color-1: #fff;
+$section-title-color-2: #000;
+
+$section-descr-margin: 0 0 20px 0;
+$section-descr-color-1: #999;
+
+// card title & descr & text
+$card-title-color-1: #fff;
+$card-title-color-2: #000;
+
+$card-descr-color-1: #fff;
+$card-descr-color-2: #000;
+
+$price-text-color: #000;
+
+$review-comment-color: #fff;
+
+
+// backgrounds
+$about-bg: "@/assets/backgrounds/bg-2.png";
+$price-bg: "@/assets/backgrounds/bg-5.png";
+$review-bg: "@/assets/backgrounds/bg-3.png";
+$work-bg: "@/assets/backgrounds/bg-3.png";

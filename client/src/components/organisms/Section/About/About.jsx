@@ -34,16 +34,19 @@ const About = () => {
 
 
   return (
-    <div className={clsx(s["about"])}>
+    <div id="about" className={clsx(s["about"])}>
       <div className={clsx(s["about-container"], "container", "container__indent")}>
         <h2 className={clsx(s["about-title"])}>{aboutData.title}</h2>
 
         <div className={clsx(s["about__content"])}>
           <div className={clsx(s["about__content__descr"])}>
-            <p className={clsx(s["about__content__descr-text"])}>
+            {/* <p className={clsx(s["about__content__descr-text"])}>
               Welcome to 
               <Highlight type="rect">ToDo</Highlight> 
               – a portable and visible tool for managing tasks! …
+            </p> */}
+            <p className={clsx(s["about__content__descr-text"])}>
+              TodoList is a lightweight and intuitive web application for task management. It is built with an emphasis on ease of launch, minimal dependencies, and maximum reproducibility of the environment. Suitable for both personal use and as a teaching example of architecture where transparency, predictability and maintainability of code are important.
             </p>
 
             <div className={clsx(s["about__content__descr-pros"])}>
