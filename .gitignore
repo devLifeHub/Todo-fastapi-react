@@ -1,0 +1,45 @@
+# --- Общие ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+logs/
+tmp/
+*.swp
+*.swo
+
+
+# --- Python / Server ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.eggs/
+*.egg-info/
+.venv/
+venv/
+tdenv/
+
+# --- Alembic ---
+alembic/__pycache__/
+alembic/versions/__pycache__/
+
+# --- Node / Client ---
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+dist/
+build/
+coverage/
+
+# --- Frontend cache ---
+.cache/
+.eslintcache
+
