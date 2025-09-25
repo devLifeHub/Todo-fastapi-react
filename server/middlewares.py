@@ -11,12 +11,13 @@ ALLOW_ORIGINS = [
     "http://localhost",
     "http://localhost:8000",
     "http://localhost:5173",
+    "https://devlifehub.github.io",
 ]
 
 def register_middlewares(app: FastAPI) -> None:
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=ALLOW_ORIGINS,
+        allow_origins=["*"],
         allow_methods=["*"],
         allow_headers=["*"],
         allow_credentials=True,

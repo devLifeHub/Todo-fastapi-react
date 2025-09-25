@@ -10,12 +10,13 @@ import PayIcon from '@/components/atoms/Icon/Common/PayIcon';
 import AddAvatar from '@/components/atoms/Icon/Common/AddAvatar';
 import HomeIcon from '@/components/atoms/Icon/Common/HomeIcon';
 import AvatarDisplay from '@/components/molecules/AvatarDisplay/AvatarDisplay'
+import BotIcon from '@/assets/icons/bot.svg?react'
 
 import s from './TodoAvatarMenuView.module.scss';
 
 
 
-const TodoAvatarMenuView = ({ isLoading, url, isActive, toggleMenu, handleShowProfileForm, handleShowReviewForm, onLogout }) => {
+const TodoAvatarMenuView = ({ isLoading, url, isActive, toggleMenu, handleShowProfileForm, handleShowReviewForm, onBot, onLogout }) => {
   return (
     <div 
       className={clsx(s["avatar-menu"])} 
@@ -37,12 +38,14 @@ const TodoAvatarMenuView = ({ isLoading, url, isActive, toggleMenu, handleShowPr
             </button>
             <span className={clsx(s["avatar-menu__item-text"])}>logout</span>
           </li>
+
           <li className={clsx(s["avatar-menu__item"], s["item-2"], isActive && s["active-2"])}>
-            <button className={clsx(s["avatar-menu__item-btn"])}>
-              <SettingIcon className={clsx(s["avatar-menu__item-icon"], s["icon-setting"])} />
+            <button className={clsx(s["avatar-menu__item-btn"])} onClick={onBot}>
+              <BotIcon className={clsx(s["avatar-menu__item-icon"], s["icon-bot"])} />
             </button>
-            <span className={clsx(s["avatar-menu__item-text"])}>setting</span>
+            <span className={clsx(s["avatar-menu__item-text"])}>chatbot</span>
           </li>
+
           <li className={clsx(s["avatar-menu__item"], s["item-3"], isActive && s["active-3"])}>
             <button className={clsx(s["avatar-menu__item-btn"])} onClick={handleShowReviewForm} >
               <ReviewIcon className={clsx(s["avatar-menu__item-icon"], s["icon-review"])} />
@@ -82,6 +85,7 @@ TodoAvatarMenuView.propTypes = {
   handleShowProfileForm: PropTypes.func.isRequired,
   handleShowReviewForm: PropTypes.func.isRequired,
   handleFileChange: PropTypes.func.isRequired,
+  onBot: PropTypes.func.isRequired,
   onLogout: PropTypes.func.isRequired,
 }
 
