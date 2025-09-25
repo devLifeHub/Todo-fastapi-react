@@ -108,7 +108,7 @@ class DatabaseConfig(BaseModel):
 
 
 class AccessToken(BaseModel):
-    lifetime_seconds: int = 36000
+    lifetime_seconds: int = 60 * 60 * 24 * 30  # 30 дней
     reset_password_token_secret: str
     verification_token_secret: str
 

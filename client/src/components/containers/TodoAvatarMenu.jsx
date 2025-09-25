@@ -53,6 +53,13 @@ const TodoAvatarMenu = () => {
       })
   }
 
+  const onBot = () => {
+    const token = localStorage.getItem("accessToken");
+    const botUsername = "TodoManagerAppBot";
+    const url = `https://t.me/${botUsername}?start=${encodeURIComponent(token)}`;
+    window.open(url, "_blank");
+  }
+
   return (
    <TodoAvatarMenuView 
    isLoading={isLoading} 
@@ -61,7 +68,8 @@ const TodoAvatarMenu = () => {
    toggleMenu={toggleMenu}
    handleShowProfileForm={handleShowProfileForm}
    handleShowReviewForm={handleShowReviewForm}
-   handleFileChange={handleFileChange} 
+   handleFileChange={handleFileChange}
+   onBot={onBot}
    onLogout={onLogout}
    />
     
